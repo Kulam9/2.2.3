@@ -1,0 +1,69 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 50px);
+	grid-template-rows: repeat(4, 50px);
+	gap: 5px;
+	grid-template-areas:
+		'seven eight nine reset'
+		'four five six plus'
+		'one two three minus'
+		'zer zer zer equals';
+}
+
+.button {
+	font-size: 24px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+	color: white;
+}
+
+.numberButton {
+	background-color: grey;
+}
+
+.calcButton {
+	background-color: orange;
+}
+
+.reset {
+	background-color: orange;
+}
+
+.responseOutput {
+	display: flex;
+	justify-content: end;
+	max-height: 60px;
+	max-width: 210px;
+	margin-left: auto;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	color: white;
+	font-size: 3rem;
+	padding: 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.reset {
+	grid-area: reset;
+}
+.equals {
+	grid-area: equals;
+}
+.plus {
+	grid-area: plus;
+}
+.minus {
+	grid-area: minus;
+}
